@@ -1,5 +1,6 @@
 package com.createsapp.roomdatabasewithretrofit.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
@@ -15,7 +16,7 @@ public interface ActorDao {
     void insert(List<Actor> actorList);
 
     @Query("SELECT * FROM actor")
-    void getAllActors();
+    LiveData<List<Actor>> getAllActors();
 
     @Query("DELETE FROM actor")
     void delete();
