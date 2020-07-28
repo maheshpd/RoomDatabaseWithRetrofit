@@ -20,7 +20,7 @@ public class ActorRespository {
         getAllActors = database.actorDao().getAllActors();
     }
 
-    void insert(List<Actor> actorList) {
+    public void insert(List<Actor> actorList) {
         new InsertAsyncTask(database).execute(actorList);
     }
 
