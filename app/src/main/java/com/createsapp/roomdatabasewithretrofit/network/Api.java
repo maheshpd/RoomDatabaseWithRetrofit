@@ -7,7 +7,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
-interface Api {
-    @GET("data.php")
+public interface Api {
+    @GET("data.php/")
     Call<List<Actor>> getAllActors();
 }
